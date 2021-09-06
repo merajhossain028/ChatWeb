@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #161625;
+}
+
+.circle {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    background: radial-gradient(#ffffffca, #2745b0 70%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 996;
+}
+
+.circle2 {
+    background: radial-gradient(#ffffffca, #5d001f 70%);
+    top: 50%;
+    left: 50%;
+}
+
+#container {
+    height: 670px;
+    width: 500px;
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(30deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(20px);
+}
+
+/* header */
+#header {
+    height: 130px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#header a {
+    height: 130px;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #e6336f;
+    font-size: 20px;
+}
+
+/* profile */
+#header #profileImage {
+    height: 60px;
+    width: 60px;
+    border: 2px solid #e6336f;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 90px;
+}
+
+#header #profileImage img {
+    width: 100%;
+}
+
+/* details */
+#header #userDetail {
+    position: absolute;
+    left: 160px;
+}
+
+/* name */
+#header #userDetail #name {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+    color: #bd003f;
+}
+
+#mainSection {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    overflow-y: auto;
+    padding: 30px;
+}
+#mainSection #errors{
+    font-size: 19px;
+    padding: 10px 35px;
+}
+
+#mainSection .request {
+    min-height: 80px;
+    max-width: 75%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#mainSection .request .name,
+#mainSection .response .name {
+    font-size: 20px;
+    color: #bd006d;
+}
+
+#mainSection .request .name {
+    color: #5d006d;
+}
+
+#mainSection .request .messages {
+    font-size: 17px;
+}
+
+#mainSection .responseCard {
+    min-height: 80px;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#mainSection .responseCard .response {
+    min-width: 80px;
+    max-width: 75%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* messages input field */
+#messagingTypingSection {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+#messagingTypingSection #typingField {
+    height: 50px;
+    width: 330px;
+    border: none;
+    outline: none;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    box-shadow: 1px 1px 6px #00000013, -1px -1px 6px #e6336f13;
+    border-radius: 7px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    position: absolute;
+    left: 30px;
+}
+
+#messagingTypingSection #typingField::placeholder {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#messagingTypingSection #sendMessage {
+    height: 50px;
+    width: 90px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #e6336f;
+    margin: 0px 15px;
+    padding: 0px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+/* customizing scroll bar */
+#mainSection::-webkit-scrollbar {
+    background: transparent;
+}
+
+#mainSection::-webkit-scrollbar-track {
+    width: 40px;
+}
+
+#mainSection::-webkit-scrollbar-thumb {
+    height: 40px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+}
+#messagingTypingSection .setId
+{
+    display: none;
+}

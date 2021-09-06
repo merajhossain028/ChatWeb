@@ -1,0 +1,112 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #161625;
+}
+.circle
+{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    background: radial-gradient(#ffffffca,#2745b0 70%);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    z-index: 996;
+}
+.circle2
+{
+    background: radial-gradient(#ffffffca,#5d001f 70%);
+    top: 50%;
+    left: 50%;
+}
+#container
+{
+    height: auto;
+    width: 500px;
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(30deg,rgba(255,255,255,0.1),rgba(255,255,255,0.4));
+    border: 1px solid rgba(255,255,255,0.9);
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    z-index: 999;
+    backdrop-filter: blur(20px);
+}
+#container h2
+{
+    font-size: 55px;
+    margin: 30px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px #5d001f;
+}
+#container #errors
+{
+    font-size: 20px;
+    display: none;
+}
+#container .name
+{
+    width: 49.4%;
+}
+#container input
+{
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: linear-gradient(to top,rgba(255,255,255,0.1),rgba(255,255,255,0.3));
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin: 8px 0;
+    padding: 0px 20px;
+    font-size: 18px;
+    color: #ffffffd3;
+    border-radius: 7px;
+    box-shadow: 1px 1px 6px #00000013, -1px -1px 6px #e6336f13;
+    text-shadow: 1px 1px 1px #000;
+}
+#container input::placeholder
+{
+    color: #fff;
+}
+#container input[type="file"]
+{
+    box-shadow: none;
+    background: transparent;
+    height: auto;
+    padding: 0 4px;
+    border: none
+}
+#container input[type="submit"]
+{
+    background: #e6336f;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+#container p
+{
+    font-size: 19px;
+    margin: 17px;
+    color: #fff;
+}
+#container p a
+{
+    text-decoration: none;
+    font-size: 21px;
+    color: #fff;
+}
